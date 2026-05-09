@@ -32,5 +32,5 @@ jobs:
       - name: Build
         # This MUST have the env block directly under it
         run: npm run build --if-present
-        env:
-          NODE_OPTIONS: --openssl-legacy-provider
+        #env:
+         # NODE_OPTIONS: --openssl-legacy-provider
