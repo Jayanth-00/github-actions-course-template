@@ -5,7 +5,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "master ]
+    branches: [ "master"]
   pull_request:
     branches: [ "master" ]
 
@@ -17,6 +17,7 @@ jobs:
       matrix:
         # Node 18, 20, and 22 REQUIRE the legacy flag for Webpack 4
         node-version: [16.x, 20.x, 22.x]
+        os: [ubuntu-latest, windows-2016]
 
     steps:
       - uses: actions/checkout@v4
