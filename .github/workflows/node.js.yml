@@ -21,6 +21,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/download-artifact@master
+        with: 
+          name: webpack artifacts
+          path: public
+
+      - uses: actions/uplaod-artifact@master
+        with: 
+          name: webpack artifacts
+          path: public/
+          
+          
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
